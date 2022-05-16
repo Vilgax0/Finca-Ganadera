@@ -32,6 +32,7 @@ public class Mover_ganado extends javax.swing.JFrame {
 
         mover = new javax.swing.JButton();
         añadir = new javax.swing.JButton();
+        b_volver = new javax.swing.JButton();
         titulo = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
@@ -53,7 +54,18 @@ public class Mover_ganado extends javax.swing.JFrame {
         añadir.setFont(new java.awt.Font("Sitka Display", 0, 24)); // NOI18N
         añadir.setText("Añadir ganado");
         añadir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 240, 200, 40));
+        getContentPane().add(añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 200, 40));
+
+        b_volver.setBackground(new java.awt.Color(153, 204, 255));
+        b_volver.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
+        b_volver.setText("Volver al menú principal");
+        b_volver.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b_volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_volverActionPerformed(evt);
+            }
+        });
+        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, -1, -1));
 
         titulo.setFont(new java.awt.Font("Sitka Banner", 0, 48)); // NOI18N
         titulo.setForeground(new java.awt.Color(255, 255, 255));
@@ -96,6 +108,13 @@ public class Mover_ganado extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_moverActionPerformed
 
+    private void b_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_volverActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Pagina_principal a = new Pagina_principal();
+        a.setVisible(true);
+    }//GEN-LAST:event_b_volverActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -134,6 +153,7 @@ public class Mover_ganado extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton añadir;
+    private javax.swing.JButton b_volver;
     private javax.swing.JLabel fondo;
     private javax.swing.JButton mover;
     private javax.swing.JLabel titulo;

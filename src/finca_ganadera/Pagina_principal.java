@@ -50,6 +50,7 @@ public class Pagina_principal extends javax.swing.JFrame {
         b_mover1 = new javax.swing.JButton();
         b_comprar = new javax.swing.JButton();
         b_salir = new javax.swing.JButton();
+        b_vacunar = new javax.swing.JButton();
         titulo1 = new javax.swing.JLabel();
         texto1 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
@@ -67,7 +68,7 @@ public class Pagina_principal extends javax.swing.JFrame {
                 b_mover1ActionPerformed(evt);
             }
         });
-        getContentPane().add(b_mover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, 160, 40));
+        getContentPane().add(b_mover1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 150, 30));
 
         b_comprar.setBackground(new java.awt.Color(204, 204, 255));
         b_comprar.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
@@ -79,7 +80,7 @@ public class Pagina_principal extends javax.swing.JFrame {
                 b_comprarActionPerformed(evt);
             }
         });
-        getContentPane().add(b_comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 160, 40));
+        getContentPane().add(b_comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 150, 30));
 
         b_salir.setBackground(new java.awt.Color(204, 204, 255));
         b_salir.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
@@ -91,7 +92,18 @@ public class Pagina_principal extends javax.swing.JFrame {
                 b_salirActionPerformed(evt);
             }
         });
-        getContentPane().add(b_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 250, 160, 40));
+        getContentPane().add(b_salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 240, 150, 30));
+
+        b_vacunar.setBackground(new java.awt.Color(204, 204, 255));
+        b_vacunar.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
+        b_vacunar.setText("Vacunar ganado");
+        b_vacunar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b_vacunar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_vacunarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(b_vacunar, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 240, 150, 30));
 
         titulo1.setFont(new java.awt.Font("Sitka Banner", 0, 36)); // NOI18N
         titulo1.setText("BIENVENIDO A NUESTRA GRANJA");
@@ -127,11 +139,18 @@ public class Pagina_principal extends javax.swing.JFrame {
         
     }//GEN-LAST:event_b_comprarActionPerformed
 
+    private void b_vacunarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_vacunarActionPerformed
+        // TODO add your handling code here:
+        this.setVisible(false);
+        Vacunar_ganado a = new Vacunar_ganado();
+        a.setVisible(true);
+    }//GEN-LAST:event_b_vacunarActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        System.out.println("a");
+        
         int codigo;
         int vacunado;
         for (int i = 0; i < 30; i++) {
@@ -235,6 +254,7 @@ public class Pagina_principal extends javax.swing.JFrame {
     private javax.swing.JButton b_comprar;
     private javax.swing.JButton b_mover1;
     private javax.swing.JButton b_salir;
+    private javax.swing.JButton b_vacunar;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel texto1;
     private javax.swing.JLabel titulo1;
