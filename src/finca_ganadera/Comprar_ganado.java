@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * @author Usuario
  */
 public class Comprar_ganado extends javax.swing.JFrame {
-    static int peso;
+    
     static int potrero0;
     static String raza0;
     static int nro0;
@@ -45,77 +45,78 @@ public class Comprar_ganado extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(300, 100));
+        setPreferredSize(new java.awt.Dimension(730, 460));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         texto.setBackground(new java.awt.Color(204, 204, 204));
         texto.setFont(new java.awt.Font("Sitka Banner", 1, 48)); // NOI18N
         texto.setForeground(new java.awt.Color(51, 51, 51));
         texto.setText("COMPRAR GANADO");
-        getContentPane().add(texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 40, 400, 80));
+        getContentPane().add(texto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 400, 80));
 
         jLabel2.setBackground(new java.awt.Color(204, 204, 255));
         jLabel2.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         jLabel2.setText("Raza:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 150, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         jLabel1.setText("Numero de potrero");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de ganado");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, -1));
 
         t_cantidad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 t_cantidadActionPerformed(evt);
             }
         });
-        getContentPane().add(t_cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 210, 130, -1));
+        getContentPane().add(t_cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 130, -1));
 
         t_nro_potrero.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 t_nro_potreroActionPerformed(evt);
             }
         });
-        getContentPane().add(t_nro_potrero, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 130, -1));
+        getContentPane().add(t_nro_potrero, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 130, -1));
 
         t_raza.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 t_razaActionPerformed(evt);
             }
         });
-        getContentPane().add(t_raza, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 130, -1));
+        getContentPane().add(t_raza, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 130, -1));
 
         b_volver.setBackground(new java.awt.Color(153, 204, 255));
         b_volver.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         b_volver.setText("Volver al menú principal");
         b_volver.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b_volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         b_volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b_volverActionPerformed(evt);
             }
         });
-        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, -1, -1));
+        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 370, -1, -1));
 
+        b_comprar.setBackground(new java.awt.Color(153, 153, 255));
         b_comprar.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         b_comprar.setText("COMPRAR");
+        b_comprar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         b_comprar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b_comprarActionPerformed(evt);
             }
         });
-        getContentPane().add(b_comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 290, 140, 30));
+        getContentPane().add(b_comprar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 110, 30));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comprar2.jpg"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-310, 0, 1280, 610));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-430, -60, 1280, 610));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void b_comprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_comprarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_b_comprarActionPerformed
 
     private void b_volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_volverActionPerformed
         // TODO add your handling code here:
@@ -125,43 +126,52 @@ public class Comprar_ganado extends javax.swing.JFrame {
     }//GEN-LAST:event_b_volverActionPerformed
 
     private void t_nro_potreroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_nro_potreroActionPerformed
-        // TODO add your handling code here:
-        int potrero = Integer.parseInt(t_nro_potrero.getText());
-        potrero0 = potrero;
+        // TODO add your handling code here:     
+        potrero0 = Integer.parseInt(t_nro_potrero.getText());
         
     }//GEN-LAST:event_t_nro_potreroActionPerformed
 
     private void t_razaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_razaActionPerformed
         // TODO add your handling code here:
-        String raza = t_raza.getText();
-        raza0 = raza;
-        
+        raza0 = String.valueOf(t_raza.getText());       
     }//GEN-LAST:event_t_razaActionPerformed
 
     private void t_cantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_cantidadActionPerformed
         // TODO add your handling code here:
         int nro = Integer.parseInt(t_cantidad.getText());
-        nro0 = nro;
+        nro0 = Integer.parseInt(t_cantidad.getText());
     }//GEN-LAST:event_t_cantidadActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
+    private void b_comprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_comprarActionPerformed
+        // TODO add your handling code here:        
+        JOptionPane.showMessageDialog(null, "potrero: " + potrero0);
+        JOptionPane.showMessageDialog(null, "raza: " + raza0);
+        JOptionPane.showMessageDialog(null, "cantidad animales: " + nro0);
+        int peso;
         int suma = 0;
         
-       
         for (int i = 0; i < nro0; i++) {
             peso = (int)(Math.random()*(600-400)+400);
-            suma+=peso;
-           
+            suma += peso;
         }
-            if (suma>6000) {
+            
+            if (suma>6000){
                 JOptionPane.showMessageDialog(null,"Hay demasiado peso, no puedes comprar todo mi rey");
             }else{
                 JOptionPane.showMessageDialog(null,"compra exitosa");
             }
             JOptionPane.showMessageDialog(null, "suma de los pesos del ganado: " + suma + " Kilogramos");
+        
+        
+        
+    
+    }//GEN-LAST:event_b_comprarActionPerformed
+
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
         
 
         /* Create and display the form */

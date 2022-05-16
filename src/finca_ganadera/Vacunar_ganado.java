@@ -33,17 +33,21 @@ public class Vacunar_ganado extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(300, 100));
+        setPreferredSize(new java.awt.Dimension(730, 460));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         b_volver.setBackground(new java.awt.Color(153, 204, 255));
+        b_volver.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         b_volver.setText("Volver al menú principal");
         b_volver.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b_volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         b_volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b_volverActionPerformed(evt);
             }
         });
-        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, -1, -1));
+        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));

@@ -37,6 +37,8 @@ public class Mover_ganado extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(300, 100));
+        setPreferredSize(new java.awt.Dimension(730, 460));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         mover.setBackground(new java.awt.Color(204, 204, 255));
@@ -48,32 +50,33 @@ public class Mover_ganado extends javax.swing.JFrame {
                 moverActionPerformed(evt);
             }
         });
-        getContentPane().add(mover, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 200, 40));
+        getContentPane().add(mover, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 190, 170, 30));
 
         añadir.setBackground(new java.awt.Color(204, 204, 255));
         añadir.setFont(new java.awt.Font("Sitka Display", 0, 24)); // NOI18N
         añadir.setText("Añadir ganado");
         añadir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 230, 200, 40));
+        getContentPane().add(añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 170, 30));
 
         b_volver.setBackground(new java.awt.Color(153, 204, 255));
         b_volver.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         b_volver.setText("Volver al menú principal");
         b_volver.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b_volver.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         b_volver.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 b_volverActionPerformed(evt);
             }
         });
-        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 420, -1, -1));
+        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 360, -1, -1));
 
         titulo.setFont(new java.awt.Font("Sitka Banner", 0, 48)); // NOI18N
         titulo.setForeground(new java.awt.Color(255, 255, 255));
         titulo.setText("CONFIGURACIÓN POTREROS");
-        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 580, 60));
+        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 580, 60));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo_ganado.jpg"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-390, -40, 1330, 530));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-350, -80, 1230, 590));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
