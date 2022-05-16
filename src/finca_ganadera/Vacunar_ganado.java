@@ -4,6 +4,8 @@
  */
 package finca_ganadera;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Usuario
@@ -27,8 +29,9 @@ public class Vacunar_ganado extends javax.swing.JFrame {
     private void initComponents() {
 
         b_volver = new javax.swing.JButton();
-        t_vacunar = new javax.swing.JTextField();
+        t_potrero_vacunar = new javax.swing.JTextField();
         t_nro_vacunas = new javax.swing.JTextField();
+        b_vacunar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -49,9 +52,26 @@ public class Vacunar_ganado extends javax.swing.JFrame {
                 b_volverActionPerformed(evt);
             }
         });
-        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
-        getContentPane().add(t_vacunar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 130, -1));
-        getContentPane().add(t_nro_vacunas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 130, -1));
+        getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, -1, -1));
+        getContentPane().add(t_potrero_vacunar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 130, -1));
+
+        t_nro_vacunas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                t_nro_vacunasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(t_nro_vacunas, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 130, -1));
+
+        b_vacunar.setBackground(new java.awt.Color(204, 153, 255));
+        b_vacunar.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
+        b_vacunar.setText("VACUNAR");
+        b_vacunar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        b_vacunar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                b_vacunarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(b_vacunar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 120, 30));
 
         jLabel2.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,6 +100,20 @@ public class Vacunar_ganado extends javax.swing.JFrame {
         Pagina_principal a = new Pagina_principal();
         a.setVisible(true);
     }//GEN-LAST:event_b_volverActionPerformed
+
+    private void t_nro_vacunasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_nro_vacunasActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_t_nro_vacunasActionPerformed
+
+    private void b_vacunarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_vacunarActionPerformed
+        // TODO add your handling code here:
+        int potrero = Integer.parseInt(t_potrero_vacunar.getText());
+        int cantidad = Integer.parseInt(t_nro_vacunas.getText());
+        JOptionPane.showMessageDialog(null, "potrero " + potrero);
+        JOptionPane.showMessageDialog(null, "cantidad a vacunar: " + cantidad);
+        
+    }//GEN-LAST:event_b_vacunarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -117,12 +151,13 @@ public class Vacunar_ganado extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton b_vacunar;
     private javax.swing.JButton b_volver;
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField t_nro_vacunas;
-    private javax.swing.JTextField t_vacunar;
+    private javax.swing.JTextField t_potrero_vacunar;
     // End of variables declaration//GEN-END:variables
 }

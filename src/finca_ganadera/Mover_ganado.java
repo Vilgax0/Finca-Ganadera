@@ -126,7 +126,7 @@ public class Mover_ganado extends javax.swing.JFrame {
     private void añadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirActionPerformed
         // TODO add your handling code here:
         int potrero = Integer.parseInt(JOptionPane.showInputDialog("¿A qué potrero deseas agregar?"));
-        int cant_nueva = Integer.parseInt(JOptionPane.showInputDialog("Cuantas vacas deseas añadir"));
+        int cant_nuevaa = Integer.parseInt(JOptionPane.showInputDialog("Cuantas vacas deseas añadir"));
         
         if (potrero > 8) {
             JOptionPane.showMessageDialog(null, "El potrero que elegiste no es valido");

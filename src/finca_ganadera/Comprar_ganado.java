@@ -13,10 +13,6 @@ import javax.swing.JOptionPane;
  */
 public class Comprar_ganado extends javax.swing.JFrame {
     
-    static int potrero0;
-    static String raza0;
-    static int nro0;
-    
     /**
      * Creates new form Comprar_ganado
      */
@@ -37,9 +33,9 @@ public class Comprar_ganado extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        t_cantidad = new javax.swing.JTextField();
-        t_nro_potrero = new javax.swing.JTextField();
+        t_potrero = new javax.swing.JTextField();
         t_raza = new javax.swing.JTextField();
+        t_cantidad = new javax.swing.JTextField();
         b_volver = new javax.swing.JButton();
         b_comprar = new javax.swing.JButton();
         fondo = new javax.swing.JLabel();
@@ -67,27 +63,9 @@ public class Comprar_ganado extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         jLabel3.setText("Cantidad de ganado");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 160, -1, -1));
-
-        t_cantidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                t_cantidadActionPerformed(evt);
-            }
-        });
-        getContentPane().add(t_cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 200, 130, -1));
-
-        t_nro_potrero.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                t_nro_potreroActionPerformed(evt);
-            }
-        });
-        getContentPane().add(t_nro_potrero, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 200, 130, -1));
-
-        t_raza.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                t_razaActionPerformed(evt);
-            }
-        });
-        getContentPane().add(t_raza, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 130, -1));
+        getContentPane().add(t_potrero, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 120, 20));
+        getContentPane().add(t_raza, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 210, 120, 20));
+        getContentPane().add(t_cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 210, 120, -1));
 
         b_volver.setBackground(new java.awt.Color(153, 204, 255));
         b_volver.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
@@ -125,32 +103,18 @@ public class Comprar_ganado extends javax.swing.JFrame {
         a.setVisible(true);
     }//GEN-LAST:event_b_volverActionPerformed
 
-    private void t_nro_potreroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_nro_potreroActionPerformed
-        // TODO add your handling code here:     
-        potrero0 = Integer.parseInt(t_nro_potrero.getText());
-        
-    }//GEN-LAST:event_t_nro_potreroActionPerformed
-
-    private void t_razaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_razaActionPerformed
-        // TODO add your handling code here:
-        raza0 = String.valueOf(t_raza.getText());       
-    }//GEN-LAST:event_t_razaActionPerformed
-
-    private void t_cantidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_t_cantidadActionPerformed
-        // TODO add your handling code here:
-        int nro = Integer.parseInt(t_cantidad.getText());
-        nro0 = Integer.parseInt(t_cantidad.getText());
-    }//GEN-LAST:event_t_cantidadActionPerformed
-
     private void b_comprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_b_comprarActionPerformed
         // TODO add your handling code here:        
-        JOptionPane.showMessageDialog(null, "potrero: " + potrero0);
-        JOptionPane.showMessageDialog(null, "raza: " + raza0);
-        JOptionPane.showMessageDialog(null, "cantidad animales: " + nro0);
+        int potrero = Integer.parseInt(t_potrero.getText());
+        int cantidad = Integer.parseInt(t_cantidad.getText());
+        String raza = String.valueOf(t_raza.getText());
+        JOptionPane.showMessageDialog(null, "potrero: " + potrero);
+        JOptionPane.showMessageDialog(null, "raza: " + raza);
+        JOptionPane.showMessageDialog(null, "cantidad animales: " + cantidad);
         int peso;
         int suma = 0;
         
-        for (int i = 0; i < nro0; i++) {
+        for (int i = 0; i < cantidad; i++) {
             peso = (int)(Math.random()*(600-400)+400);
             suma += peso;
         }
@@ -190,7 +154,7 @@ public class Comprar_ganado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField t_cantidad;
-    private javax.swing.JTextField t_nro_potrero;
+    private javax.swing.JTextField t_potrero;
     private javax.swing.JTextField t_raza;
     private javax.swing.JLabel texto;
     // End of variables declaration//GEN-END:variables
