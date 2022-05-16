@@ -27,6 +27,8 @@ public class Vacunar_ganado extends javax.swing.JFrame {
     private void initComponents() {
 
         b_volver = new javax.swing.JButton();
+        t_vacunar = new javax.swing.JTextField();
+        t_nro_vacunas = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -48,6 +50,8 @@ public class Vacunar_ganado extends javax.swing.JFrame {
             }
         });
         getContentPane().add(b_volver, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 300, -1, -1));
+        getContentPane().add(t_vacunar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 190, 130, -1));
+        getContentPane().add(t_nro_vacunas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 130, -1));
 
         jLabel2.setFont(new java.awt.Font("Sitka Display", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -118,5 +122,7 @@ public class Vacunar_ganado extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField t_nro_vacunas;
+    private javax.swing.JTextField t_vacunar;
     // End of variables declaration//GEN-END:variables
 }

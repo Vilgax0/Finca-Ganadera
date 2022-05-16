@@ -56,6 +56,11 @@ public class Mover_ganado extends javax.swing.JFrame {
         añadir.setFont(new java.awt.Font("Sitka Display", 0, 24)); // NOI18N
         añadir.setText("Añadir ganado");
         añadir.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        añadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                añadirActionPerformed(evt);
+            }
+        });
         getContentPane().add(añadir, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 190, 170, 30));
 
         b_volver.setBackground(new java.awt.Color(153, 204, 255));
@@ -117,6 +122,18 @@ public class Mover_ganado extends javax.swing.JFrame {
         Pagina_principal a = new Pagina_principal();
         a.setVisible(true);
     }//GEN-LAST:event_b_volverActionPerformed
+
+    private void añadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_añadirActionPerformed
+        // TODO add your handling code here:
+        int potrero = Integer.parseInt(JOptionPane.showInputDialog("¿A qué potrero deseas agregar?"));
+        int cant_nueva = Integer.parseInt(JOptionPane.showInputDialog("Cuantas vacas deseas añadir"));
+        
+        if (potrero > 8) {
+            JOptionPane.showMessageDialog(null, "El potrero que elegiste no es valido");
+        }else{
+            JOptionPane.showMessageDialog(null, "Se ha añadido correctamente");
+        }
+    }//GEN-LAST:event_añadirActionPerformed
 
     /**
      * @param args the command line arguments
